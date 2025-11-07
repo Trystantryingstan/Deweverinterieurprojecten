@@ -3,79 +3,89 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jouw Bedrijf – Snel in contact + Projecten</title>
-<meta name="description" content="Neem binnen 1 minuut contact op met Jouw Bedrijf. Bekijk ook een selectie van recent uitgevoerde projecten." />
+<title>Cosy Home Crafts — Ambacht & Sfeer voor Thuis</title>
+<meta name="description" content="Cosy‑style ambachtelijke woonaccessoires en maatwerk interieur. Handgemaakt, warm en tijdloos. Neem direct contact op of bekijk voorbeelden." />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root {
---bg:#0b0c10; --card:#111318; --ink:#f7f8fa; --muted:#b7bdc6; --brand:#3b82f6; --brand-ink:#0b2559;
---ring: rgba(59,130,246,.45);
+:root{
+--bg:#fffaf6; /* warme off‑white */
+--ink:#1f2937; /* slate‑900 */
+--muted:#6b7280; /* slate‑500 */
+--brand:#9b6b4a; /* cosy terracotta‑bruin */
+--brand-2:#cfa07e; /* lichtere accentkleur */
+--card:#ffffff;
+--ring: rgba(155,107,74,.35);
+--shadow: 0 10px 30px rgba(31,41,55,.08);
+--radius: 18px;
 }
-* { box-sizing: border-box }
-html,body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji'; color:var(--ink); background:linear-gradient(180deg,#0b0c10 0%, #0e1016 100%); }
-a { color:inherit; text-decoration:none }
-img { max-width:100%; display:block; border-radius:16px; }
-.container { width:min(1100px, 92%); margin-inline:auto }
-header { position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:rgba(11,12,16,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:40 }
-.row { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0 }
-.brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px }
-.brand .logo { width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,#60a5fa, #22d3ee); box-shadow:0 10px 30px rgba(34,211,238,.25); }
-.btn { display:inline-flex; align-items:center; gap:10px; font-weight:600; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.04); transition:.18s ease; }
-.btn:hover { transform:translateY(-1px); border-color:rgba(255,255,255,.18) }
-.btn.primary { background:linear-gradient(180deg,#60a5fa,#3b82f6); color:white; border:none; box-shadow:0 10px 25px rgba(59,130,246,.35) }
-.pill { font-size:.82rem; color:var(--muted); background:rgba(255,255,255,.04); padding:8px 12px; border:1px solid rgba(255,255,255,.06); border-radius:999px; display:inline-block }
-.hero { padding:64px 0 28px }
-.hero h1 { font-size: clamp(1.9rem, 3vw + 1rem, 3rem); line-height:1.08; margin:16px 0 12px; }
-.hero p { color:var(--muted); font-size:1.05rem; max-width:58ch }
-.cta-wrap { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px }
-.cards { display:grid; grid-template-columns:repeat(12, 1fr); gap:18px; margin:26px 0 6px }
-.card { grid-column:span 12; background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25) }
-.card h3 { margin:0 0 8px; font-size:1.05rem }
-.card p { margin:6px 0; color:var(--muted) }
-.grid-2 > .card { grid-column:span 12 }
-@media (min-width:800px){ .grid-2 > .card { grid-column:span 6 } }
-.projects { padding:26px 0 56px }
-.projects h2, .contact h2 { font-size:1.6rem; margin:8px 0 2px }
-.sub { color:var(--muted); margin:0 0 18px }
-.project-grid { display:grid; grid-template-columns:repeat(12, 1fr); gap:18px }
-.project { grid-column:span 12; background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; overflow:hidden; transition:.2s ease; }
-.project:hover { transform:translateY(-2px) }
-.project .body { padding:14px 16px 16px }
-.tag { font-size:.78rem; color:#cbd5e1; background:rgba(148,163,184,.18); border:1px solid rgba(255,255,255,.06); padding:6px 10px; border-radius:999px; display:inline-block }
-.meta { color:#aab2bf; font-size:.88rem }
-@media (min-width:860px){ .project { grid-column:span 4 } }
-.contact { padding:24px 0 64px }
-form { display:grid; gap:12px; max-width:640px }
-input, textarea { width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.04); color:var(--ink); outline:none }
-input:focus, textarea:focus { border-color: var(--ring); box-shadow:0 0 0 6px var(--ring) }
-.muted { color:var(--muted); font-size:.9rem }
-footer { padding:22px 0 48px; color:#9aa3af; border-top:1px solid rgba(255,255,255,.06) }
-.sticky-cta { position:fixed; left:0; right:0; bottom:0; backdrop-filter:saturate(160%) blur(6px); background:rgba(8,10,15,.8); border-top:1px solid rgba(255,255,255,.08); padding:10px; display:flex; gap:10px; justify-content:center; z-index:50 }
-@media (min-width:820px){ .sticky-cta { display:none } }
+*{box-sizing:border-box}
+html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;}
+img{max-width:100%; display:block; border-radius:16px}
+a{text-decoration:none; color:inherit}
+.container{width:min(1140px,92%); margin-inline:auto}
+header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,250,246,.8); border-bottom:1px solid rgba(0,0,0,.06)}
+.row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700}
+.logo{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 8px 22px rgba(155,107,74,.35)}
+nav a{padding:10px 12px; border-radius:12px}
+nav a:hover{background:rgba(0,0,0,.04)}
+.btn{display:inline-flex; align-items:center; gap:10px; font-weight:600; padding:12px 16px; border-radius:12px; border:1px solid rgba(0,0,0,.08); box-shadow:var(--shadow); background:#fff}
+.btn.primary{background:linear-gradient(180deg,var(--brand-2),var(--brand)); color:white; border:none}
+.hero{padding:56px 0 28px}
+.eyebrow{display:inline-block; color:#7c5a41; background:#f5eae2; border:1px solid #edd8cc; padding:8px 12px; border-radius:999px; font-size:.9rem}
+h1{font-family:"Playfair Display", serif; font-weight:700; font-size: clamp(2.2rem, 3.6vw + .5rem, 3.8rem); line-height:1.06; margin:14px 0 10px}
+.lead{color:var(--muted); font-size:1.08rem; max-width:62ch}
+.cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+.feature-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin:26px 0 10px}
+.feature{grid-column:span 12; background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); padding:18px}
+@media(min-width:860px){.feature{grid-column:span 4}}
+.products{padding:24px 0 50px}
+.section-title{font-family:"Playfair Display", serif; font-size:1.8rem; margin:6px 0}
+.sub{color:var(--muted); margin:0 0 16px}
+.product-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+.card{grid-column:span 12; background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:.2s}
+.card:hover{transform:translateY(-2px)}
+@media(min-width:860px){.card{grid-column:span 3}}
+.card .body{padding:12px 14px 16px}
+.tag{font-size:.8rem; color:#7c5a41; background:#f5eae2; border:1px solid #edd8cc; padding:6px 10px; border-radius:999px; display:inline-block}
+.about{padding:12px 0 54px}
+.two{display:grid; grid-template-columns:1fr; gap:20px}
+@media(min-width:900px){.two{grid-template-columns:1.1fr .9fr}}
+.blockquote{font-family:"Playfair Display", serif; font-size:1.2rem; background:#fff; border-left:4px solid var(--brand); padding:14px 16px; border-radius:12px; box-shadow:var(--shadow)}
+.process{padding:14px 0 50px}
+.steps{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+.step{grid-column:span 12; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); padding:16px}
+@media(min-width:860px){.step{grid-column:span 3}}
+.gallery{padding:8px 0 54px}
+.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:10px}
+.g1{grid-column:span 6}
+.g2{grid-column:span 3}
+.g3{grid-column:span 3}
+@media(max-width:760px){.g1,.g2,.g3{grid-column:span 12}}
+.contact{padding:20px 0 70px}
+form{display:grid; gap:12px; max-width:680px}
+input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(0,0,0,.12); background:#fff; color:var(--ink); outline:none}
+input:focus, textarea:focus{border-color:var(--brand-2); box-shadow:0 0 0 6px var(--ring)}
+footer{border-top:1px solid rgba(0,0,0,.08); padding:20px 0 40px; color:#6b7280}
+.sticky-cta{position:fixed; left:0; right:0; bottom:0; display:flex; justify-content:center; gap:10px; padding:10px; background:rgba(255,250,246,.95); border-top:1px solid rgba(0,0,0,.06); box-shadow:0 -10px 30px rgba(0,0,0,.06)}
+@media(min-width:820px){.sticky-cta{display:none}}
 </style>
 </head>
 <body>
 <header>
 <div class="container row">
-<div class="brand"><div class="logo" aria-hidden></div> <span>Jouw Bedrijf</span></div>
-<nav class="cta-wrap">
-<a class="btn" href="tel:+310612345678" aria-label="Bel nu">📞 Bel nu</a>
-<a class="btn" href="https://wa.me/31612345678?text=Hoi%20Jouw%20Bedrijf%2C%20ik%20heb%20een%20vraag." target="_blank" rel="noopener">💬 WhatsApp</a>
-<a class="btn primary" href="#contact">✉️ Snel contact</a>
+<div class="brand"><div class="logo" aria-hidden></div><span>Cosy Home Crafts</span></div>
+<nav class="nav">
+<a href="#producten">Collectie</a>
+<a href="#over">Over</a>
+<a href="#projecten">Projecten</a>
+<a href="#contact" class="btn">Contact</a>
+<a href="https://wa.me/31612345678?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20jullie%20collectie" target="_blank" class="btn primary">WhatsApp</a>
 </nav>
 </div>
 </header>
 
 
 <main>
-<section class="hero container">
-<span class="pill">Reactietijd: meestal binnen 1 uur</span>
-<h1>Direct in contact met <span style="background:linear-gradient(90deg,#60a5fa,#22d3ee); -webkit-background-clip:text; background-clip:text; color:transparent">Jouw Bedrijf</span></h1>
-<p>Bel of app ons direct, of laat je gegevens achter—wij reageren supersnel. Hieronder vind je ook een kleine selectie van projecten die we recent hebben uitgevoerd.</p>
-<div class="cta-wrap">
-<a class="btn primary" href="#contact">Contactformulier</a>
-<a class="btn" href="#projecten">Bekijk projecten</a>
-</div>
-<div class="cards grid-2" style="margin-top:22px">
-<div class="card">
+</html>
