@@ -1,79 +1,28 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cosy Home Crafts — Warm, Ambachtelijk & Tijdloos</title>
-<meta name="description" content="Ambachtelijke woonaccessoires en maatwerk. Zachte kleuren, veel witruimte, grote beelden en directe contactknop — in cosy stijl." />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{
---bg:#fffaf6; /* warme off‑white */
---ink:#1f2937; /* slate-900 */
---muted:#6b7280; /* slate-500 */
---brand:#a77457; /* cosy terracotta-bruin */
---brand-2:#e9c9b3; /* zacht nude-accent */
---card:#ffffff;
---ring: rgba(167,116,87,.35);
---shadow: 0 12px 34px rgba(31,41,55,.08);
---radius: 18px;
-}
-*{box-sizing:border-box}
-html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;}
-img{max-width:100%; display:block; border-radius:16px}
-a{text-decoration:none; color:inherit}
-.container{width:min(1180px,92%); margin-inline:auto}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Vloeren & Interieurafwerking | Jouw Droomvloer Begint Hier</title>
+    <meta name="description" content="Specialisten in hoogwaardige vloeren en interieurafwerking. Transformeer uw ruimte met vakmanschap en oog voor detail." />
+    <meta name="author" content="Premium Afwerking" />
 
+    <meta property="og:title" content="Premium Vloeren & Interieurafwerking" />
+    <meta property="og:description" content="Specialisten in hoogwaardige vloeren en interieurafwerking. Transformeer uw ruimte met vakmanschap en oog voor detail." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-/* HEADER */
-header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(160%) blur(10px); background:rgba(255,250,246,.8); border-bottom:1px solid rgba(0,0,0,.06)}
-.row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
-.brand{display:flex; align-items:center; gap:14px}
-.logo{width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 10px 26px rgba(167,116,87,.35)}
-.brand span{font-weight:700; letter-spacing:.2px}
-nav a{padding:10px 12px; border-radius:12px}
-nav a:hover{background:rgba(0,0,0,.04)}
-.btn{display:inline-flex; align-items:center; gap:10px; font-weight:600; padding:12px 16px; border-radius:12px; border:1px solid rgba(0,0,0,.08); background:#fff; box-shadow:var(--shadow)}
-.btn.primary{background:linear-gradient(180deg,var(--brand-2),var(--brand)); color:#fff; border:none}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
 
-
-/* HERO SPLIT */
-.hero{padding:64px 0 18px}
-.split{display:grid; grid-template-columns:1.05fr .95fr; gap:32px}
-@media(max-width:960px){.split{grid-template-columns:1fr;}}
-.eyebrow{display:inline-block; color:#7c5a41; background:#f5eae2; border:1px solid #edd8cc; padding:8px 12px; border-radius:999px; font-size:.9rem}
-h1{font-family:"Playfair Display", serif; font-weight:700; font-size: clamp(2.4rem, 3.8vw + .5rem, 4rem); line-height:1.04; margin:16px 0 12px}
-.lead{color:var(--muted); font-size:1.08rem; max-width:62ch}
-.cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
-.hero-media{display:grid; grid-template-columns:1fr 1fr; gap:12px; align-content:start}
-.hero-media img{height:100%; object-fit:cover}
-.hero-media .tall{grid-row:span 2}
-
-
-/* BADGES */
-.badges{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
-.badge{font-size:.86rem; color:#7c5a41; background:#f5eae2; border:1px solid #edd8cc; padding:8px 12px; border-radius:999px}
-
-
-/* PRODUCTEN */
-.section{padding:28px 0 54px}
-.title{font-family:"Playfair Display", serif; font-size:1.9rem; margin:0 0 6px}
-.sub{color:var(--muted); margin:0 0 16px}
-.product-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
-.card{grid-column:span 12; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:.2s}
-.card:hover{transform:translateY(-2px)}
-@media(min-width:900px){.card{grid-column:span 3}}
-.card .body{padding:12px 14px 16px}
-.tag{font-size:.8rem; color:#7c5a41; background:#f5eae2; border:1px solid #edd8cc; padding:6px 10px; border-radius:999px; display:inline-block}
-
-
-/* ABOUT SPLIT */
-.two{display:grid; grid-template-columns:1.1fr .9fr; gap:28px}
-@media(max-width:980px){.two{grid-template-columns:1fr}}
-.blockquote{font-family:"Playfair Display", serif; font-size:1.2rem; background:#fff; border-left:4px solid var(--brand); padding:14px 16px; border-radius:12px; box-shadow:var(--shadow)}
-
-
-/* STEPS */
-.steps{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
-.step{grid-column:span 12; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); padding:16px}
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
